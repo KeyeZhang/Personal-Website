@@ -33,7 +33,7 @@ This Personal Webpage for Keye Zhang was designed and implemented as a single-pa
 
 ### Environment Setup Guide
 1. Clone the repository:
-`git clone https://github.com/uiuc-web-programming/mp1_starter_17.git mp1`, then `cd mp1`
+`git clone https://github.com/https://github.com/KeyeZhang/Personal-Website.git`, then `cd Personal-Website-master`
 2. Install dependencies:
 `npm install`
 3. Run the dev server:
