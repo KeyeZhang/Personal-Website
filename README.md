@@ -12,7 +12,7 @@ This Personal Webpage for Keye Zhang was designed and implemented as a single-pa
 
 1. Layout: All content must be laid out in a single page with full-width horizontal stripes/sections including a header and a footer - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/2.png?raw=true)
 2. Sticky Navbar: A top navigation bar that sticks to the top of the window when scrolling - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/3.gif?raw=true)
-3. Position Indicator: Indicator of the current reading position visible in the navigation bar (see above gif for example). Make sure your implementation highlights the last menu item when you scroll to the bottom of the page. ( __Implementation Tip__ : To figure out which menu item to highlight, you’ll have to figure out which section lies directly below the bottom margin of the navigation bar. You can use methods that give you the height and position of different divs to figure that out. You will want to recompute this whenever there is a scroll event.)
+3. Position Indicator: Indicator of the current reading position visible in the navigation bar (see above gif for example). Make sure your implementation highlights the last menu item when you scroll to the bottom of the page. 
 4. Navbar Resizing: Navigation bar must be larger when users are at the top of the page. As users start scrolling down, it should resize and become smaller. Note that the text fontsize should also start larger and become smaller as users scroll down - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/4.gif?raw=true)
 5. Smooth Scrolling: Smooth scrolling when navigating to a different section using the navigation bar - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/5.gif?raw=true)
 6. Carousel: A section with a carousel/slider using a minimum of three slides. It should include the navigation arrows on the side - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/6.gif?raw=true)
@@ -38,4 +38,4 @@ This Personal Webpage for Keye Zhang was designed and implemented as a single-pa
 `npm install`
 3. Run the dev server:
 `npm run dev`
-4. Open a browser and go to `http://localhost:8080/` to view your page. You should see "Welcome to MP1!" at the top of the screen. Note that if for some reason your port 8080 is occupied, it will default to 8081.
+4. Open a browser and go to `http://localhost:8080/` to view your page. 
