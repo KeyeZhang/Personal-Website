@@ -1,0 +1,374 @@
+body{
+  position: absolute;
+  width: 100%;
+}
+
+@mixin list-hover{
+  border: 2px solid;
+}
+
+@mixin font-center($fontsize){
+  text-align: center;
+  font-size: $fontsize;
+}
+
+@mixin top($distance){
+  top: $distance;
+}
+
+#nav-bar {
+  z-index: 10;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  margin: -2vmin;
+  //border-style: dashed;
+}
+
+.fontawesome{
+  text-align: center;
+}
+
+.active-nav{
+  background-color: #000;
+  color: #fff;
+  a{
+    color:#fff;
+  }
+  //when active-nav is added into #nav-bar, this "a" would override the outside general "a"!
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+    cursor: pointer;
+}
+
+li:hover{
+  @include list-hover;
+}
+
+li {
+  display: inline-block;
+  margin-top: 1vmin;         // how to vertically centered ?
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin-right: 4vmin;
+  font-size: 4vmin;
+}
+
+.scroll-before{
+  height: 12vmin;
+  li {
+    display: inline-block;
+    margin-bottom: 10%;         // how to vertically centered ?
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-right: 5%;
+    font-size: 4vmin;
+  }
+  li:hover{
+    @include list-hover;
+  }
+}
+
+.scroll-after{
+  height: 8vmin;
+  li {
+    display: inline-block;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-right: 10%;
+    font-size: 3vmin;
+  }
+  li:hover{
+    @include list-hover;
+  }
+}
+
+#index{
+  z-index: 0;
+  position: relative;
+  top: 10vmin;
+  width: 100%;
+  height: 60vw;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header-on-index-page{
+  @include font-center(12vmin);
+  //width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  position: absolute;;   //must need!??
+  font-family: 'Satisfy', cursive;
+  z-index: 5;
+}
+
+//CSS3 animation
+//citation: learn from
+//https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+@mixin animation-style{
+  @include font-center(8vw);
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  position: absolute;   //must need!??
+  font-family: 'Satisfy', cursive;
+  z-index: 5;
+  animation-name: slidein;
+}
+
+@mixin animation-speed($speed){
+  animation-duration: $speed;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
+
+.header-animation-fast{
+  @include top(8vmin);
+  @include animation-style;
+  @include animation-speed(3s);
+}
+
+.header-animation-slow{
+  @include top(30vmin);
+  @include animation-style;
+  @include animation-speed(4s);
+}
+
+#video-background {
+  width: 100vw;
+  height: auto;
+  z-index: -100;
+  margin: auto;
+  //border-style: dashed;
+}
+
+#statement{
+  position: relative;
+  top: 5vmin;
+  width: 100%;
+  height: 70vmin;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  //border-style: dashed;
+  //fixed the problem for flex issues in safari: add "-web-kit-"
+  //citation: https://jsfiddle.net/gjy1t16p/8/
+}
+
+h2{
+  @include font-center(3vmin);
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.introduction {
+  //float: left;  // make sure the three boxes are parrallel to each other
+  margin-top: 5vw;
+  height: 50vmin;
+  width: 40vmin;
+  flex: 0 0 30%;
+  text-align: center;
+  //border-style: dashed;
+}
+
+.introduction p {
+  @include font-center(2.5vmin);
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  line-height: 6vmin;
+}
+
+#category{
+  position:relative;
+  top: 8vmin;
+  height: 100vmin;
+  width: 100%;
+}
+//Carousel: citation
+//Learn from: https://github.com/codepo8/simple-carousel
+.carouselbox {
+  width: 100%;
+  height: 100vmin;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+  //border-style: dashed;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+}
+
+.content li {
+  font-size: 10vmin;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: 100vmin;
+  list-style: none;
+  z-index: 2;
+}
+
+.content img{
+  width: 100%;
+}
+
+.active {
+  height: 100vmin;
+}
+
+.active .buttons {
+  margin-top: 4vmin;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.active li {
+  position: absolute;
+  top: 4vmin;
+  opacity: 0;
+  transition: 1s;
+}
+
+.active li.current {
+  top: 4vmin;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.li img {
+  width: 100%;
+  height: 50vmin;
+  display: block;
+}
+
+//modal
+//citation: w3c school
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+.prev{
+  top: 50vmin;
+  position: relative;
+  left: -80vmin;
+}
+
+.next{
+  top: 50vmin;
+  position: relative;
+  left: 80vmin;
+}
+
+#modalzone{
+  position: relative;
+  top: 1vmin;
+  width: 100%;
+  height: 70vmin;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  vertical-align: middle;
+  -webkit-justify-content: space-between;
+  //border-style: dashed;
+}
+
+@mixin mdimg{
+  margin-top: 10%;
+  width: 50vmin;
+  height: 80%;
+  cursor: pointer;
+}
+
+#mdimg1:hover {opacity: 0.8;}
+#mdimg1 {
+  @include mdimg;
+}
+
+#mdimg2:hover {opacity: 0.8;}
+#mdimg2 {
+  @include mdimg;
+}
+
+#mdimg3:hover {opacity: 0.5;}
+#mdimg3 {
+  @include mdimg;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  overflow: scroll;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.8);
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+
+.close {
+  position: absolute;
+  top: 5vmin;
+  right: 5vmin;
+  color: #000;
+  font-size: 5vmin;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    cursor: pointer;
+}
+
+#joinus {
+  background-repeat: no-repeat;
+  background-image: url("http://www.marklobo.com.au/news/wp-content/uploads/2013/02/Mark_Lobo_Photography-Melbourne-Jam_Jar1.jpg");
+  background-attachment: fixed;
+  background-size: 100%, 100%;
+  background-position: center;
+  position: relative;
+  top: 4vmin;
+  width: 100%;
+  height: 70vmin;
+  text-align: center;
+}
+
+footer {
+  background-color: #fff;
+  background-size: 100%, 100%;
+  background-position: center;
+  position: relative;
+  top: 4vmin;
+  width: 100%;
+  height: 50vmin;
+}
+
+.footer-center{
+  text-align: center;
+}
+
+.footer-center img{
+  width: 12%;
+  margin-top: 3%;
+}
