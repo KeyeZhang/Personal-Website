@@ -1,22 +1,14 @@
-# MP #1: One Web Page To Rule Them All
-### Due: Sept 25, 11.59PM CDT
+# Keye's Personal Webpage
 
 ## Table of Contents
-1. [Assignment](#assignment)
-2. [Grading Breakdown](#grading-breakdown)
-3. [Rules](#rules)
-4. [Environment Setup Guide](#environment-setup-guide)
-5. [Submission Details](#submission-details)
+1. [Introduction](#intrduction)
+2. [Environment Setup Guide](#environment-setup-guide)
 
-## Assignment
+### Introduction
 
-#### Task
+This Personal Webpage for Keye Zhang was designed and implemented as a single-page website with specified functionality and formatting using only HTML, SCSS, and Javascript. This Personal Webpage is derived from one of my course project of The Art of Web and Programming, which gave me first-hand experience with HTML5 (e.g. header, canvas, video), CSS3/SASS (e.g. use of webfonts, animations, layout), and Javascript(ES5 or ES6).
 
-In this programming assignment, you will design and implement a single-page website with specified functionality and formatting using only HTML, SCSS, and Javascript. The content of the website is up to you. For example, the subject can be a company/organization, a product, or a personal/portfolio page. This assignment will give you first-hand experience with HTML5 (e.g. header, canvas, video), CSS3/SASS (e.g. use of webfonts, animations, layout), and Javascript(ES5 or ES6).
-
-#### Requirements
-
-Your webpage will have to implement the features listed below. Note that the examples are only meant to illustrate the features. You do not have to make you webpage look similar to the examples. You just have to incorporate that feature in some form.
+### Functions 
 
 1. Layout: All content must be laid out in a single page with full-width horizontal stripes/sections including a header and a footer - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/2.png?raw=true)
 2. Sticky Navbar: A top navigation bar that sticks to the top of the window when scrolling - [Example](https://raw.githubusercontent.com/uiuc-web-programming/fa17/master/labs/MP-1/3.gif?raw=true)
@@ -38,35 +30,8 @@ Your webpage will have to implement the features listed below. Note that the exa
 14. At least one use of scalable vector icons through CSS (e.g. FontAwesome)
 15. Inclusion of social media icons
 
-## Grading Breakdown
 
-- Layout and Overall Design - 20%
-- Code (follows HTML5, SASS/SCSS, ES5 or ES6 best practices) - 13%
-- Smooth Scrolling - 10%
-- Carousel - 10%
-- Modal - 10%
-- Responsiveness - 10%
-- Position Indicator - 5%
-- Navbar Resizing - 5%
-- Multi-column layout - 5%
-- CSS3 Animations - 5%
-- Centering - 2%
-- Video - 2%
-- Sticky Navbar - 1%
-- Background Image - 1%
-- Scalable vector icons and inclusion of social media icons - 1%
-
-## Rules
-1. This is an individual assignment. No collaboration is permitted.
-2. It is not permitted to copy/paste code that is not your own. You are, however, free to look at different code sources for inspiration and clarity. All sources (code as well as reading material) that you reference to complete this assignment must be declared in the submission.
-3. There must be no use of any library.
-4. There should be no use of inline styling.
-5. No inline script tags should be used.
-6. HTML tables cannot be used for layout.
-7. If you think something you’re doing might not be acceptable, please ask on Piazza.
-8. You must utilize some SCSS features (variables, mixins, etc). A plain CSS file will receive less points.
-
-## Environment Setup Guide
+### Environment Setup Guide
 1. Clone the repository:
 `git clone https://github.com/uiuc-web-programming/mp1_starter_17.git mp1`, then `cd mp1`
 2. Install dependencies:
@@ -74,7 +39,3 @@ Your webpage will have to implement the features listed below. Note that the exa
 3. Run the dev server:
 `npm run dev`
 4. Open a browser and go to `http://localhost:8080/` to view your page. You should see "Welcome to MP1!" at the top of the screen. Note that if for some reason your port 8080 is occupied, it will default to 8081.
-
-## Submission Details
-
-TBD
